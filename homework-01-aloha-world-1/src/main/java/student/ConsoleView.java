@@ -18,7 +18,8 @@ public final class ConsoleView {
     // application to
     // prevent conflicts.
     /** scanner pointing towards System.in. */
-    private static final Scanner SCANNER = new Scanner(System); // System.in is a standard input
+    // replacing Scanner(System) with Scanner(System.in)
+    private static final Scanner SCANNER = new Scanner(System.in); // System.in is a standard input
                                                                 // stream, it is used to read
                                                                 // data from the keyboard.
     /** Stores the locality lists from Greeter to prevent additional copies. */
