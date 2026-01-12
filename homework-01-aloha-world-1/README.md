@@ -1,15 +1,15 @@
 Name: Arsh Singh 
 
-Github Account name:
+Github Account name: arshsinghphd
 
-Link to Assignment on Github: (copy and paste the link to your assignment repo here)
+Link to Assignment on Github: https://github.com/arshsinghphd/CS5004_Spr26
 
-How many hours did it take you to complete this assignment (estimate)?
+How many hours did it take you to complete this assignment (estimate)? 1
 
 Did you collaborate with any other students/TAs/Professors? If so, tell us who and in what
-capacity.
+capacity. 
 
-* one per row, add more if needed
+NONE
   
 Did you use any external resources (you do not have to cite in class material)? (Cite them below)
 
