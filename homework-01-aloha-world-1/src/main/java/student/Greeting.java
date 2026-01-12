@@ -18,22 +18,23 @@ package student;
  */
 public class Greeting {
     /** Holds the integer localityID, immutable. */
-    private final int localityID;
+    private int localityID;
     /** Holds the name of the locality, immutable. */
-    private final String localityName;
+    private String localityName;
     /** Holds the ASCII greeting, immutable. */
-    private final String asciiGreeting;
+    private String asciiGreeting;
     /** Holds the unicode greeting, immutable. */
-    private final String unicodeGreeting;
+    private String unicodeGreeting;
     /** Holds the name of a person, immutable. */
-    private final String name;
+    private String name;
     /** Holds the format in which the greeting will be displayed, immutable. */
-    private final String formatStr;
+    private String formatStr;
 
     /** String value of the DEFAULT_GREETING. */
     private static final String DEFAULT_GREETING = "Hello";
     /** String value of the DEFAULT_FORMAT. */
     private static final String DEFAULT_FORMATSTR = "%s, %%s!";
+
 
     /**
      * This is a constructor for the Greeting class. It makes no assumptions and everything needs to be provided.
@@ -46,13 +47,17 @@ public class Greeting {
      * @param formatStr string format of the greeting with %%s for name.
      * 
      */
-    public Greeting(int localityID, String localityName, String asciiGreeting, String unicodeGreeting, String formatStr) {
+    public Greeting(int localityID, String localityName, 
+                    String asciiGreeting, 
+                    String unicodeGreeting, 
+                    String formatStr) {
         this.localityID = localityID;
         this.localityName = localityName;
         this.asciiGreeting = asciiGreeting;
         this.unicodeGreeting = unicodeGreeting;
         this.formatStr = formatStr;
     }
+
     /**
      * This is a constructor for the Greeting class.
      * It creates an instance with user provided localityID, localityName, greeting, and DEFAULT_FORMATSTR.
@@ -65,6 +70,7 @@ public class Greeting {
     public Greeting(int localityID, String localityName, String greeting) {
         this(localityID, localityName, greeting, greeting, DEFAULT_FORMATSTR);
     }
+
     /**
      * This is a constructor for the Greeting class. 
      * It creates an instance with user provided localityID and localityName, DEFAULT_GREETING, and DEFAULT_FORMATSTR.
@@ -76,11 +82,31 @@ public class Greeting {
     public Greeting(int localityID, String localityName) {
         this(localityID, localityName, DEFAULT_GREETING, DEFAULT_GREETING, DEFAULT_FORMATSTR);
     }
-
+    
+    /**
+     * This is a private method for Greeting class that returns the locality id number. 
+     * @return localityID
+     */
     private int getLocalityID() {
         return localityID;
     }
 
-    
+    /**
+     * This is a private method for Greeting class that returns the string locality. 
+     * @return localityName
+     */
+    private String getLocalityName() {
+        return localityName;
+    }
+
+    // main method for example usage
+    public static void main(String[] args) {
+        Greeting g1 = new Greeting(1, "USA", "hello", "hello", "%s, %%s!");
+        System.out.println(g1.getLocalityID()); // prints 1
+        System.out.println(g1.getLocalityName()); // prints USA
+        Greeting g2 = new Greeting(2, "UK");
+        System.out.println(g2.getLocalityID()); // prints 2
+        System.out.println(g2.getLocalityName()); // prints UK
+    }
 
 }
