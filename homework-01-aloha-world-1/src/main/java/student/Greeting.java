@@ -18,69 +18,139 @@ package student;
  */
 public class Greeting {
     /** Holds the integer localityID, immutable. */
-    private final int localityID;
+    private int localityID;
     /** Holds the name of the locality, immutable. */
-    private final String localityName;
+    private String localityName;
     /** Holds the ASCII greeting, immutable. */
-    private final String asciiGreeting;
+    private String asciiGreeting;
     /** Holds the unicode greeting, immutable. */
-    private final String unicodeGreeting;
+    private String unicodeGreeting;
     /** Holds the name of a person, immutable. */
-    private final String name;
+    private String name;
     /** Holds the format in which the greeting will be displayed, immutable. */
-    private final String formatStr;
+    private String formatStr;
 
-    /** String value of the DEFAULT_GREETING. */
+    /** String value of the DEFAULT_GREETING with class scope. */
     private static final String DEFAULT_GREETING = "Hello";
-    /** String value of the DEFAULT_FORMAT. */
+    /** String value of the DEFAULT_FORMAT with class scope. */
     private static final String DEFAULT_FORMATSTR = "%s, %%s!";
 
+
     /**
-     * This is a constructor for the Greeting class. It makes no assumptions and everything needs to be provided.
-     * It creates an instance with user provided localityID, localityName, greeting, and formatStr.
-     * 
+     * Greeting that creates a greeting with ascii and unicode characters.
+     * It makes no assumptions and everything needs to be provided.
+     * Other constructors call this very detailed constructor.
+     *
      * @param localityID int ID of the locality.
      * @param localityName string locality.
-     * @param asciiGreeting string ascii greeting.
-     * @param unicodeGreeting string unicode greeting.
+     * @param asciiGreeting string ASCII greeting.
+     * @param unicodeGreeting string Unicode greeting.
      * @param formatStr string format of the greeting with %%s for name.
-     * 
      */
-    public Greeting(int localityID, String localityName, String asciiGreeting, String unicodeGreeting, String formatStr) {
+    public Greeting(int localityID, String localityName, 
+                    String asciiGreeting, 
+                    String unicodeGreeting, 
+                    String formatStr) {
         this.localityID = localityID;
         this.localityName = localityName;
         this.asciiGreeting = asciiGreeting;
         this.unicodeGreeting = unicodeGreeting;
         this.formatStr = formatStr;
     }
+
     /**
-     * This is a constructor for the Greeting class.
-     * It creates an instance with user provided localityID, localityName, greeting, and DEFAULT_FORMATSTR.
-     * It calls the more deatiled method using default values for missing parameters.
-     * @param localityID int ID of the locality.
-     * @param localityName string locality.
-     * @param greeting string greeting.
-     * 
+     * Greeting that creates a greeting with ASCII and Unicode characters
+     * assuming the language is already using ascii letters only. It also
+     * assumes the format of the greeting to be "{greeting}, {name}!"
+     *
+     * @param localityID - id of the locality
+     * @param localityName - name of the locality
+     * @param greeting - greeting using ascii characters
      */
     public Greeting(int localityID, String localityName, String greeting) {
         this(localityID, localityName, greeting, greeting, DEFAULT_FORMATSTR);
     }
+
     /**
-     * This is a constructor for the Greeting class. 
-     * It creates an instance with user provided localityID and localityName, DEFAULT_GREETING, and DEFAULT_FORMATSTR.
-     * It calls the more deatiled method using default values for the missing parameters.
-     * @param localityID int ID of the locality.
-     * @param localityName string locality.
+     * Default greeting that creates "Hello, {name}!".
+     * @param localityID - id of the locality.
+     * @param localityName - name of the locality
      * 
      */
     public Greeting(int localityID, String localityName) {
         this(localityID, localityName, DEFAULT_GREETING, DEFAULT_GREETING, DEFAULT_FORMATSTR);
     }
-
+    
+    /**
+     * This is a private method for Greeting class that returns the locality id number. 
+     * @return locality ID as an int.
+     */
     private int getLocalityID() {
         return localityID;
     }
 
-    
+    /**
+     * This is a private method for Greeting class that returns the string locality. 
+     * @return locality name as a string.
+     */
+    private String getLocalityName() {
+        return localityName;
+    }
+
+    /**
+     * Returns the ASCII greeting. Just the greeting, no formatting.
+     * @return greeting in ASCII encoding.
+     */
+    public String getAsciiGreeting() {
+    }
+
+    /**
+     * Returns the Unicode greeting. Just the greeting, no formatting.
+     *
+     * @return greeting in Unicode encoding.
+     */
+    public String getUnicodeGreeting() {
+    }
+
+    /**
+     * Returns the format string with the greeting inserted into the format.
+     * This string will have a %s, so that the name can be inserted into the
+     * greeting in the correct location.
+     *
+     * @return the format string with the greeting inserted into the format.
+     */
+    public String getFormatStr() {
+    }
+
+    /**
+     * Returns the format string with the greeting inserted into the format.
+     * This string will have a %s, so that the name can be inserted into the
+     * greeting in the correct location.
+     *
+     * @param asciiOnly -  if true, only ASCII characters will be used
+     *
+     * @return format string with the greeting inserted into the format.
+     */
+    public String getFormatStr(boolean asciiOnly) {
+    }
+
+    /**
+     * Returns the full greeting details as a string.
+     * Primarily for debugging purposes.
+     */
+    @Override
+    public String toString() {
+    }
+
+    // main method for example usage, to be deleted before submission
+    public static void main(String[] args) {
+        Greeting g1 = new Greeting(1, "USA", "hello",
+                "hello", "%s, %%s!");
+        System.out.println(g1.getLocalityID()); // prints 1
+        System.out.println(g1.getLocalityName()); // prints USA
+        Greeting g2 = new Greeting(2, "UK");
+        System.out.println(g2.getLocalityID()); // prints 2
+        System.out.println(g2.getLocalityName()); // prints UK
+    }
 
 }
