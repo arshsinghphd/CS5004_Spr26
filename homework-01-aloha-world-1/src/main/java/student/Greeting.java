@@ -35,7 +35,6 @@ public class Greeting {
     /** String value of the DEFAULT_FORMAT with class scope. */
     private static final String DEFAULT_FORMATSTR = "%s, %%s!";
 
-
     /**
      * Greeting that creates a greeting with ascii and unicode characters.
      * It makes no assumptions and everything needs to be provided.
@@ -160,6 +159,7 @@ public class Greeting {
         //System.out.println(g1.getFormatStr(true)); // prints "HELLO, %s!"
         //System.out.println(g1.getFormatStr(false)); // prints "hello, %s!"
         String name = "Alice";
+        System.out.println(g1);
         String greet = String.format(g1.getFormatStr(), name);
         System.out.println(greet); // prints hello, Alice!
         System.out.println(String.format(g1.getFormatStr(true), name));
