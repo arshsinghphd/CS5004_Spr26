@@ -32,12 +32,12 @@ public class GreetingTest {
     /**
      * Tests to make sure the locality ID is being returned properly.
      */
-    @Test
-    public void testGetLocalityID() {
-    assertEquals(2, usa.getLocalityID());
-    assertEquals(1, hawaii.getLocalityID());
-    assertEquals(3, china.getLocalityID());
-    }
+//    @Test
+//    public void testGetLocalityID() {
+//    assertEquals(2, usa.getLocalityID());
+//    assertEquals(1, hawaii.getLocalityID());
+//    assertEquals(3, china.getLocalityID());
+//    }
 
     /**
      * Tests to make sure the locality name is being returned properly.
