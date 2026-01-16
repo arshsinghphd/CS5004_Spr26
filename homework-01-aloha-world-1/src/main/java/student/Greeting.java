@@ -17,6 +17,7 @@ package student;
  *
  */
 public class Greeting {
+<<<<<<< HEAD
     /** Holds the integer localityID. */
     private int localityID;
     /** Holds the name of the locality. */
@@ -28,12 +29,19 @@ public class Greeting {
     /** Holds the name of a person, immutable. */
     private String name;
     /** Holds the format in which the greeting will be displayed. */
+    /** Holds the integer localityID, immutable. */
+    private int localityID;
+    /** Holds the name of a person, immutable. */
+    private String name;
+    /** Holds the format in which the greeting will be displayed, immutable. */
+>>>>>>> 3249341e4dc4223cee43b3c29d68346eed94fd5d
     private String formatStr;
 
     /** String value of the DEFAULT_GREETING with class scope. */
     private static final String DEFAULT_GREETING = "Hello";
     /** String value of the DEFAULT_FORMAT with class scope. */
     private static final String DEFAULT_FORMATSTR = "%s, %%s!";
+
 
     /**
      * Greeting that creates a greeting with ascii and unicode characters.
@@ -46,8 +54,15 @@ public class Greeting {
      * @param unicodeGreeting string, Unicode greeting.
      * @param formatStr string, format of the greeting with %%s for name.
      */
+<<<<<<< HEAD
     public Greeting(int localityID, String localityName, String asciiGreeting,
                     String unicodeGreeting, String formatStr) {
+=======
+    public Greeting(int localityID, String localityName, 
+                    String asciiGreeting, 
+                    String unicodeGreeting, 
+                    String formatStr) {
+>>>>>>> 3249341e4dc4223cee43b3c29d68346eed94fd5d
         this.localityID = localityID;
         this.localityName = localityName;
         this.asciiGreeting = asciiGreeting;
