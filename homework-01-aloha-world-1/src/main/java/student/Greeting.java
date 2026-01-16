@@ -17,7 +17,6 @@ package student;
  *
  */
 public class Greeting {
-<<<<<<< HEAD
     /** Holds the integer localityID. */
     private int localityID;
     /** Holds the name of the locality. */
@@ -29,19 +28,6 @@ public class Greeting {
     /** Holds the name of a person, immutable. */
     private String name;
     /** Holds the format in which the greeting will be displayed. */
-=======
-    /** Holds the integer localityID, immutable. */
-    private int localityID;
-    /** Holds the name of the locality, immutable. */
-    private String localityName;
-    /** Holds the ASCII greeting, immutable. */
-    private String asciiGreeting;
-    /** Holds the unicode greeting, immutable. */
-    private String unicodeGreeting;
-    /** Holds the name of a person, immutable. */
-    private String name;
-    /** Holds the format in which the greeting will be displayed, immutable. */
->>>>>>> 3249341e4dc4223cee43b3c29d68346eed94fd5d
     private String formatStr;
 
     /** String value of the DEFAULT_GREETING with class scope. */
