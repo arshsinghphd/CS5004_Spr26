@@ -161,20 +161,20 @@ public class Greeting {
                 getLocalityName());
     }
 
-    // main method for example usage, to be deleted before submission
-    public static void main(String[] args) {
-        Greeting g1 = new Greeting(1, "USA", "HELLO",
-                "hello", "%s, %%s!");
-        //System.out.println(g1.getLocalityID()); // prints 1
-        //System.out.println(g1.getLocalityName()); // prints US
-        //System.out.println(g1.getFormatStr()); // prints "hello, %s!"
-        //System.out.println(g1.getFormatStr(true)); // prints "HELLO, %s!"
-        //System.out.println(g1.getFormatStr(false)); // prints "hello, %s!"
-        String name = "Alice";
-        System.out.println(g1);
-        String greet = String.format(g1.getFormatStr(), name);
-        System.out.println(greet); // prints hello, Alice!
-        System.out.println(String.format(g1.getFormatStr(true), name));
-        // prints "HELLO, Alice"
-    }
+//    // main method for example usage, to be deleted before submission
+//    public static void main(String[] args) {
+//        Greeting g1 = new Greeting(1, "USA", "HELLO",
+//                "hello", "%s, %%s!");
+//        //System.out.println(g1.getLocalityID()); // prints 1
+//        //System.out.println(g1.getLocalityName()); // prints US
+//        //System.out.println(g1.getFormatStr()); // prints "hello, %s!"
+//        //System.out.println(g1.getFormatStr(true)); // prints "HELLO, %s!"
+//        //System.out.println(g1.getFormatStr(false)); // prints "hello, %s!"
+//        String name = "Alice";
+//        System.out.println(g1);
+//        String greet = String.format(g1.getFormatStr(), name);
+//        System.out.println(greet); // prints hello, Alice!
+//        System.out.println(String.format(g1.getFormatStr(true), name));
+//        // prints "HELLO, Alice"
+//    }
 }
