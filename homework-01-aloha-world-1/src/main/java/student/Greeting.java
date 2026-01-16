@@ -29,8 +29,15 @@ public class Greeting {
     /** Holds the name of a person, immutable. */
     private String name;
     /** Holds the format in which the greeting will be displayed. */
+=======
     /** Holds the integer localityID, immutable. */
     private int localityID;
+    /** Holds the name of the locality, immutable. */
+    private String localityName;
+    /** Holds the ASCII greeting, immutable. */
+    private String asciiGreeting;
+    /** Holds the unicode greeting, immutable. */
+    private String unicodeGreeting;
     /** Holds the name of a person, immutable. */
     private String name;
     /** Holds the format in which the greeting will be displayed, immutable. */
@@ -54,15 +61,10 @@ public class Greeting {
      * @param unicodeGreeting string, Unicode greeting.
      * @param formatStr string, format of the greeting with %%s for name.
      */
-<<<<<<< HEAD
-    public Greeting(int localityID, String localityName, String asciiGreeting,
-                    String unicodeGreeting, String formatStr) {
-=======
     public Greeting(int localityID, String localityName, 
                     String asciiGreeting, 
                     String unicodeGreeting, 
                     String formatStr) {
->>>>>>> 3249341e4dc4223cee43b3c29d68346eed94fd5d
         this.localityID = localityID;
         this.localityName = localityName;
         this.asciiGreeting = asciiGreeting;
@@ -102,13 +104,22 @@ public class Greeting {
     }
 
     /**
-     * This is a private method for Greeting class that returns the string locality. 
+     * This is a private method for Greeting class that returns the string locality.
      * @return string, locality name.
      */
     private String getLocalityName() {
         return localityName;
     }
 
+    // main method for example usage
+    public static void main(String[] args) {
+        Greeting g1 = new Greeting(1, "USA", "hello", "hello", "%s, %%s!");
+        System.out.println(g1.getLocalityID()); // prints 1
+        System.out.println(g1.getLocalityName()); // prints USA
+        Greeting g2 = new Greeting(2, "UK");
+        System.out.println(g2.getLocalityID()); // prints 2
+        System.out.println(g2.getLocalityName()); // prints UK
+    }
     /**
      * Returns the ASCII greeting. Just the greeting, no formatting.
      * @return string, greeting in ASCII encoding.
