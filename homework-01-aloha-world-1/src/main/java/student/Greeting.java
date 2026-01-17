@@ -85,7 +85,7 @@ public class Greeting {
      * This is a private method for Greeting class that returns the locality id number.
      * @return int, localityID.
      */
-    private int getLocalityID() {
+    public int getLocalityID() {
         return localityID;
     }
 
