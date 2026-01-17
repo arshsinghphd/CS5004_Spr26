@@ -109,9 +109,9 @@ These questions require deeper thinking of the topic. We don't expect 100% corre
 
 2. Right now, the application isn't very dynamic in that it can be difficult to add new languages and greetings without modifying the code every time. Just thinking programmatically,  how could you make the application more dynamic? You are free to reference Geeting.java and how that could be used in your design.
 
-    We created the class `Greeting` as a part of the assignment. We could use this class to let a user or administrator to create the `listLocality` and corresponding new lists `listAsciiGreeting` and `listUnicodeGreeting`. 
+    We created the class `Greeting` as a part of the assignment. We could use this class to let a user or administrator create the `listLocality` and corresponding new lists `listAsciiGreeting` and `listUnicodeGreeting`. 
     
-    We will also need to udate the method `Greeter.greet()` to `switch` by `int` `locality` (`localityID` in `Greeting`) to find the correct corresponding Strings `greeting` and then `formatStr` for display.
+    We will also need to update the method `Greeter.greet()` to `switch` by `int` `locality` (`localityID` in `Greeting`) to find the correct corresponding Strings `greeting` and then `formatStr` for display.
 
 > [!IMPORTANT]
 >  After you upload the files to your github (ideally you have been committing throughout this progress / after you answer every question) - make sure to look at your completed assignment on github/in the browser! You can make sure images are showing up/formatting is correct, etc. The TAs will actually look at your assignment on github, so it is important that it is formatted correctly.
