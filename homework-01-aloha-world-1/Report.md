@@ -72,12 +72,15 @@ Write a short paragraph detailing the flow of the program in your own words. Thi
 2. For each syntax additional item listed above, explain what it does in your own words and then link a resource where you figured out what it does in the references section. 
 
     * (example) The `final` keyword when used on a class prevents the class from being subclassed. This means that the class cannot be extended by another class. This is useful when you want to prevent a class from being modified or extended[^1] . It is often the standard to do this when a class only contains static methods such as driver or utility classes. Math in Java is an example of a final class[^2] .
-    * 
+    * `package` whether user defined on imported, programs can be structured into collections of packages, with each package maintaining its own set of type names, helping to avoid naming conflicts[^3].
+    * `Integer.parseInt` converts strings to integers if the characters match integer format[^4].
+    * `String.equals` Compares a string to another specified object, the result is true if and only if both match character by character[^5].
 
 3. What does `main` do in Java? 
 
     Go ahead and answer the question as a short paragraph / few sentences. Notice the indent, this is valid because it is a list item. (erase this line before writing.)
 
+    `main` method is the entry point of a program in Java. Java compiler expects one (and only one) main in one (and only one) public class.
 
 4. What does `toString()` do in Java? Why should any object class you create have a `toString()` method?
 
@@ -117,8 +120,11 @@ These questions require deeper thinking of the topic. We don't expect 100% corre
 
 [^2]: Math (Java Platform SE 17). https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Math.html. Accessed: 2024-03-30.
 
+[^3]: Packages (Java Platform SE 8). https://docs.oracle.com/javase/specs/jls/se8/html/jls-7.html#jls-7.4. Accessed: 2026-01-17.
 
+[^4]: Integer.parseInt (Java Platform SE 8). https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html#parseInt-java.lang.String-
 
+[^5]: String.equals (Java Platform SE 8). https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#equals-java.lang.Object-
 
 <!-- This is a comment, below this link the links in the document are placed here to make ti easier to read. This is an optional style for markdown, and often as a student you will include the links inline. for example [mermaid](https://mermaid.js.org/intro/syntax-reference.html) -->
 [mermaid]: https://mermaid.js.org/intro/syntax-reference.html
