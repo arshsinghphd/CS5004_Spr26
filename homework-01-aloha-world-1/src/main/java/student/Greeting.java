@@ -93,7 +93,7 @@ public class Greeting {
      * This is a private method for Greeting class that returns the string locality.
      * @return string, locality name.
      */
-    private String getLocalityName() {
+    public String getLocalityName() {
         return localityName;
     }
 
