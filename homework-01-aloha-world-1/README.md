@@ -13,7 +13,8 @@ NONE
   
 Did you use any external resources (you do not have to cite in class material)? (Cite them below)
 
-* I needed help for working with ItelliJ IDE: google/gemini and IntelliJ's learn module.
+* I needed help for working with ItelliJ IDE: google/gemini and 
+* IntelliJ's learn module.
 
 (Optional) What was your favorite part of the assignment?
 
