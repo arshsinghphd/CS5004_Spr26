@@ -12,6 +12,47 @@ link an image in markdown. You may also use [mermaid] class diagrams if you pref
 ### Program Flow
 Write a short paragraph detailing the flow of the program in your own words. This is to help you understand / trace the code (and give you practice of something called a code walk that will be required in this course).
 
+```mermaid
+---
+title: Aloha World UML
+---
+classDiagram
+    direction LR
+    AlohaWorld --> Greeter : has a
+    AlohaWorld --> ConsoleView : uses
+    ConsoleView --> Greeter : uses
+
+    class AlohaWorld {
+        + name: String
+        + greeter: Greeter
+        - AlohaWorld(): void
+        + main(String args): void
+    }
+    class Greeter {
+        - name: String
+        - locality: integer
+        - localityList: List~integer~
+        - HAWAII: integer
+        - CHINA: integer
+        - ITALY: integer
+        - DEFAULT_LOCALITY: integer
+        + Greeter(String name): void
+        + Greeter(String name, integer locality): void
+        + getName(): String
+        + getLocality(): integer
+        + setLocality(integer): void
+        + greet(): String
+        + greet(boolean asciiOnly): String
+        + getLocalityString(): String
+        + hashCode(): integer
+        + equals(Object obj): boolean
+        + toString(): String
+        + getLocalityList(): List~String~
+    }
+    class ConsoleView {
+        
+    }
+```
 
 ## Assignment Questions
 
