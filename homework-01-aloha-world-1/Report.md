@@ -59,6 +59,21 @@ classDiagram
 ### Program Flow
 Write a short paragraph detailing the flow of the program in your own words. This is to help you understand / trace the code (and give you practice of something called a code walk that will be required in this course).
 
+The program execution begins in the only public Class `AlohaWorld` in its  function `main`. 
+
+In `main` the following things happen.
+
+One instance each of the classes String as `name` and int as `locality` is created.
+
+`main` calls methods from the class `ConsoleView`: `ConsoleView.getName()` to get the user input string for `name`, and  `ConsoleView.getLocality()` to get int `locality`.
+
+Based on these an object `greeter` of the class `Greeter` is created. This object has the following features: a `String name`, an `int location`, and a `listLocations<String>` which matches a uniques String `greeting` to the object using `location` as the index for the `listLocations`.
+
+Finally `main` sends this object, `greeter`, over to the function `ConsoleView.printGreeting(greeter)` where a formatted string with user entered `name` and the matching `greeting` can be sent to the standard output stream to be displayed on the terminal.
+
+The execution then return to `main` where a while loop is initiated to asks user if they want to exit or continue using `ConsoleView.checkRunAgain()`. If the user chooses to continue `yes` or `y`, the local memory of object `greeter` is deleted and a new object of the same name is created and the process descibed in above two paragraphs is repeated. If the user chooses to exit, `no` or `n`, the execution returns to main.
+
+In `main` while loop is terminated, and ultimately `main` and the program are terminated.
 
 ## Assignment Questions
 
