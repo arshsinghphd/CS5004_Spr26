@@ -22,22 +22,30 @@ Mermaid is a markdown language that allows you to create diagrams. You can find 
 <!-- start your playground code under this dashed line -->
 ----
 
-## 1. Headings
+## 1. Formatting Headings
 
 # title/heading
 ## second-level
 ### third-level
 
-## 2. Numbered list
+## 2. List
+
+Ordered lists
+
 1. one
 2. two 
 3. three
 
+Unordered lists
+* Two
+* One
+* Three
+
 ## 3. Hyperlinks
-[Google](https://google.com)
+Go to the website [google.com](https://google.com).
 
 ## 4. Local links
-[Title](#title)
+If you do not recall the title of this doc, you can see it by clicking the following hyperlink [Title](#title).
 
 ## 5. Mermaid
 
@@ -47,8 +55,6 @@ graph TD;
 2 --> 3{Turn};
 3 --Right--> 4[Bedroom];
 3 --Left--> 5[Kitchen];
-4 --> 6[Go to sleep
-Work tomorrow];
-5 --> 7[Make coffee
-Finish this today];
+4 --> 6[Go to sleep\nWork tomorrow];
+5 --> 7[Make coffee\nFinish this today];
 ```
