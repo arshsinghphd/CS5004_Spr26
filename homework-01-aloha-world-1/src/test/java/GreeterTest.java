@@ -8,9 +8,6 @@ import org.junit.jupiter.api.Test;
 
 import student.Greeter;
 
-
-
-
 /**
  * Greeter Test Class. STUDENTS - it is safe to assume these tests
  * are correct when you are debugging your Greeter.java
@@ -39,10 +36,6 @@ public class GreeterTest {
     private static final Greeter greeter2 = new Greeter(NAME_ONE, 1);
     private static final Greeter greeter3 = new Greeter(NAME_ONE);
     private static final Greeter greeter4 = new Greeter(NAME_TWO, 3);
-
-
-
-
 
     /**
      * Tests the constructor, making sure it throws an exception if the locality is out of range
@@ -149,7 +142,5 @@ public class GreeterTest {
         assertThrows(IllegalArgumentException.class, () -> {
             greeter.setLocality(0);
         });
-
     }
-
 }
