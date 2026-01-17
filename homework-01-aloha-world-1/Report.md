@@ -84,12 +84,11 @@ Write a short paragraph detailing the flow of the program in your own words. Thi
 
 4. What does `toString()` do in Java? Why should any object class you create have a `toString()` method?
 
-    Same as above - short answer
+    `toString()` formats information stored in any class for human viewing as a string. If an object class has some salient information that can be viewed by humans as a string, the designer/writer should ensure the only the pertinent information is displayed when the user asks to print the instances (objects) of the class. 
 
 5. What is javadoc style commenting? What is it used for? 
 
-    Same as above - short answer
-
+    Javadoc style comments are specific long comments that can be parsed and compiled into HTML java docs by `javadoc` tool. One can pass critical information as elements such as parameters as @params, and return as @return, and the `javadoc` can create preformmated clean documentation.
 
 6. Describe Test Driving Development (TDD) in your own words. 
 
