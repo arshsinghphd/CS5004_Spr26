@@ -148,8 +148,12 @@ public class Greeting {
      */
     @Override
     public String toString() {
-        return String.format("{name:\"%s\", locality:\"%s\"}", name,
-                getLocalityName());
+        return String.format("{localityID:%d, " +
+                        "localityName:\"%s\", " +
+                        "asciiGreeting:\"%s\", " +
+                        "unicodeGreeting:\"%s\"}",
+                this.getLocalityID(), this.getLocalityName(),
+                this.getAsciiGreeting(), this.getUnicodeGreeting());
     }
 
 //    // main method for example usage, to be deleted before submission
