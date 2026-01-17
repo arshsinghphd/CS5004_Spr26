@@ -269,4 +269,5 @@ public class Greeter {
     public static List<String> getLocalityList() {
         return List.copyOf(localityList); // return a copy so original isn't modified
     }
+
 }
