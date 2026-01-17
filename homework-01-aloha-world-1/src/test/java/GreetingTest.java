@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.BeforeEach;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import student.Greeting;
+import org.junit.jupiter.api.Test;
 
 /**
  * Class to test the Greeting class. STUDENTS, you can assume the methods in this class are correct.

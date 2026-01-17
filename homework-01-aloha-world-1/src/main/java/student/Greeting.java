@@ -17,38 +17,22 @@ package student;
  *
  */
 public class Greeting {
-    /**
-     * Holds the integer localityID.
-     */
+    /** Holds the integer localityID. */
     private int localityID;
-    /**
-     * Holds the name of the locality.
-     */
+    /** Holds the name of the locality. */
     private String localityName;
-    /**
-     * Holds the ASCII greeting.
-     */
+    /** Holds the ASCII greeting. */
     private String asciiGreeting;
-    /**
-     * Holds the unicode greeting.
-     */
+    /** Holds the unicode greeting. */
     private String unicodeGreeting;
-    /**
-     * Holds the name of a person, immutable.
-     */
+    /** Holds the name of a person, immutable. */
     private String name;
-    /**
-     * Holds the format in which the greeting will be displayed.
-     */
+    /** Holds the format in which the greeting will be displayed. */
     private String formatStr;
 
-    /**
-     * String value of the DEFAULT_GREETING with class scope.
-     */
+    /** String value of the DEFAULT_GREETING with class scope. */
     private static final String DEFAULT_GREETING = "Hello";
-    /**
-     * String value of the DEFAULT_FORMAT with class scope.
-     */
+    /** String value of the DEFAULT_FORMAT with class scope. */
     private static final String DEFAULT_FORMATSTR = "%s, %%s!";
 
 
@@ -57,11 +41,11 @@ public class Greeting {
      * It makes no assumptions and everything needs to be provided.
      * Other constructors call this very detailed constructor.
      *
-     * @param localityID      int, ID of the locality.
-     * @param localityName    string, locality.
-     * @param asciiGreeting   string, ASCII greeting.
+     * @param localityID int, ID of the locality.
+     * @param localityName string, locality.
+     * @param asciiGreeting string, ASCII greeting.
      * @param unicodeGreeting string, Unicode greeting.
-     * @param formatStr       string, format of the greeting with %%s for name.
+     * @param formatStr string, format of the greeting with %%s for name.
      */
     public Greeting(int localityID, String localityName,
                     String asciiGreeting,
@@ -79,9 +63,9 @@ public class Greeting {
      * assuming the language is already using ascii letters only. It also
      * assumes the format of the greeting to be "{greeting}, {name}!"
      *
-     * @param localityID   - int, id of the locality
+     * @param localityID - int, id of the locality
      * @param localityName - string, name of the locality
-     * @param greeting     - string, greeting using ascii characters
+     * @param greeting - string, greeting using ascii characters
      */
     public Greeting(int localityID, String localityName, String greeting) {
         this(localityID, localityName, greeting, greeting, DEFAULT_FORMATSTR);
@@ -89,8 +73,7 @@ public class Greeting {
 
     /**
      * Default greeting that creates "Hello, {name}!".
-     *
-     * @param localityID   - int, id of the locality.
+     * @param localityID - int, id of the locality.
      * @param localityName - string, name of the locality
      *
      */
@@ -100,7 +83,6 @@ public class Greeting {
 
     /**
      * This is a private method for Greeting class that returns the locality id number.
-     *
      * @return int, localityID.
      */
     private int getLocalityID() {
@@ -109,20 +91,81 @@ public class Greeting {
 
     /**
      * This is a private method for Greeting class that returns the string locality.
-     *
      * @return string, locality name.
      */
     private String getLocalityName() {
         return localityName;
     }
 
-    // main method for example usage
+    /**
+     * Returns the ASCII greeting. Just the greeting, no formatting.
+     * @return string, greeting in ASCII encoding.
+     */
+    public String getAsciiGreeting() {
+        return asciiGreeting;
+    }
+
+    /**
+     * Returns the Unicode greeting. Just the greeting, no formatting.
+     *
+     * @return string, greeting in Unicode encoding.
+     */
+    public String getUnicodeGreeting() {
+        return unicodeGreeting;
+    }
+
+    /**
+     * Returns the format string with the greeting inserted into the format.
+     * This string will have a %s, so that the name can be inserted into the
+     * greeting in the correct location.
+     *
+     * @return the format string with the greeting inserted into the format.
+     * @see #getFormatStr(boolean asciiOnly)
+     */
+    public String getFormatStr() {
+        return String.format(this.formatStr, getUnicodeGreeting());
+    }
+
+    /**
+     * Returns the format string with the greeting inserted into the format.
+     * This string will have a %s, so that the name can be inserted into the
+     * greeting in the correct location.
+     *
+     * @param asciiOnly -  if true, only ASCII characters will be used
+     *
+     * @return format string with the greeting inserted into the format.
+     */
+    public String getFormatStr(boolean asciiOnly) {
+        if (asciiOnly) {
+            return String.format(this.formatStr, getAsciiGreeting());
+        }
+        return this.getFormatStr();
+    }
+
+    /**
+     * Returns the full greeting details as a string.
+     * Primarily for debugging purposes.
+     */
+    @Override
+    public String toString() {
+        return String.format("{name:\"%s\", locality:\"%s\"}", name,
+                getLocalityName());
+    }
+
+//    // main method for example usage, to be deleted before submission
 //    public static void main(String[] args) {
-//        Greeting g1 = new Greeting(1, "USA", "hello", "hello", "%s, %%s!");
-//        System.out.println(g1.getLocalityID()); // prints 1
-//        System.out.println(g1.getLocalityName()); // prints USA
-//        Greeting g2 = new Greeting(2, "UK");
-//        System.out.println(g2.getLocalityID()); // prints 2
-//        System.out.println(g2.getLocalityName()); // prints UK
+//        Greeting g1 = new Greeting(1, "USA", "HELLO",
+//                "hello", "%s, %%s!");
+//        //System.out.println(g1.getLocalityID()); // prints 1
+//        //System.out.println(g1.getLocalityName()); // prints US
+//        //System.out.println(g1.getFormatStr()); // prints "hello, %s!"
+//        //System.out.println(g1.getFormatStr(true)); // prints "HELLO, %s!"
+//        //System.out.println(g1.getFormatStr(false)); // prints "hello, %s!"
+//        String name = "Alice";
+//        System.out.println(g1);
+//        String greet = String.format(g1.getFormatStr(), name);
+//        System.out.println(greet); // prints hello, Alice!
+//        System.out.println(String.format(g1.getFormatStr(true), name));
+//        // prints "HELLO, Alice"
 //    }
 }
