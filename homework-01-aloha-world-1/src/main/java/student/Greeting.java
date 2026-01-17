@@ -156,7 +156,7 @@ public class Greeting {
                 this.getAsciiGreeting(), this.getUnicodeGreeting());
     }
 
-//    // main method for example usage, to be deleted before submission
+    // main method for example usage, to be deleted before submission
 //    public static void main(String[] args) {
 //        Greeting g1 = new Greeting(1, "USA", "HELLO",
 //                "hello", "%s, %%s!");
