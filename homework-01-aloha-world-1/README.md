@@ -19,6 +19,8 @@ Did you use any external resources (you do not have to cite in class material)? 
 
     [2] JetBrains, *IntelliJ Learn*, integrated learning environment within IntelliJ IDEA. Accessed via IntelliJ IDEA IDE, Jan. 16, 2026.
 
+* I used ChatGPT to learn how to write List\<int\> in memaid class diagram as List~int~.
+
 (Optional) What was your favorite part of the assignment?
 
 * Building a new class based on instructions at the Javadoc and tests. 
