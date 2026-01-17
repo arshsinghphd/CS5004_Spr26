@@ -92,10 +92,11 @@ Write a short paragraph detailing the flow of the program in your own words. Thi
 
 6. Describe Test Driving Development (TDD) in your own words. 
 
-    Same as above - short answer    
+    Test Diving Development is a paradigm where before writing functions, we create tests based on how the function will work as a black-box, what will go in and what will come out. Especially for the edge cases. This way the functions can be tested as soon as they are written.  
 
 7. Go to the [Markdown Playground](MarkdownPlayground.md) and add at least 3 different markdown elements you learned about by reading the markdown resources listed in the document. Additionally you need to add a mermaid class diagram (of your choice does not have to follow the assignment. However, if you did use mermaid for the assignment, you can just copy that there). Add the elements into the markdown file, so that the formatting changes are reserved to that file. 
 
+    Done.
 
 ## Deeper Thinking Questions
 
@@ -104,7 +105,8 @@ These questions require deeper thinking of the topic. We don't expect 100% corre
 
 1. Why would we want to keep interaction with the client contained to ConsoleView?
 
-
+    There are many 
+    
 2. Right now, the application isn't very dynamic in that it can be difficult to add new languages and greetings without modifying the code every time. Just thinking programmatically,  how could you make the application more dynamic? You are free to reference Geeting.java and how that could be used in your design.
 
 
