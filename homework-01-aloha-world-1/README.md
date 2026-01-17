@@ -9,12 +9,15 @@ How many hours did it take you to complete this assignment (estimate)? 3
 Did you collaborate with any other students/TAs/Professors? If so, tell us who and in what
 capacity. 
 
-NONE
+Parker McKillop and Dipen Modi helped me set up my IntelliJ IDEA by asking questions to narrow the issues.
   
 Did you use any external resources (you do not have to cite in class material)? (Cite them below)
 
-* I needed help for working with ItelliJ IDE: google/gemini and 
-* IntelliJ's learn module.
+* I needed help for working with ItelliJ IDE: google/gemini and IntelliJ IDEs in-built Learn Module. 
+
+    [1] Google LLC, *Gemini*, Generative AI. Accessed via Safari Browser, Jan. 16, 2026. Available: https://google.com/.
+
+    [2] JetBrains, *IntelliJ Learn*, integrated learning environment within IntelliJ IDEA. Accessed via IntelliJ IDEA IDE, Jan. 16, 2026.
 
 (Optional) What was your favorite part of the assignment?
 
